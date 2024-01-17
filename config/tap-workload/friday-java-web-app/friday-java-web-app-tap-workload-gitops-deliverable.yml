@@ -1,0 +1,21 @@
+apiVersion: carto.run/v1alpha1
+kind: Deliverable
+metadata:
+  name: friday-java-web-app
+  namespace: tap-workload
+  labels:
+    app.kubernetes.io/part-of: friday-java-web-app
+    apps.tanzu.vmware.com/has-tests: "true"
+    apps.tanzu.vmware.com/workload-type: web
+    app.kubernetes.io/component: deliverable
+    app.tanzu.vmware.com/deliverable-type: web
+    carto.run/cluster-template-name: config-deliverable-template
+    carto.run/resource-name: create-deliverable
+    carto.run/supply-chain-name: source-to-url
+    carto.run/template-kind: ClusterConfigTemplate
+    carto.run/template-lifecycle: mutable
+    carto.run/workload-name: friday-java-web-app
+    carto.run/workload-namespace: tap-workload
+spec:
+  source: {}
+
