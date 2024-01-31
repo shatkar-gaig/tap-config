@@ -17,5 +17,13 @@ metadata:
     carto.run/workload-name: friday-java-web-app
     carto.run/workload-namespace: tap-workload
 spec:
-  source: {}
+  params:
+  - name: gitops_ssh_secret
+    value: shatkar-gaig-https
+  source:
+    git:
+      url: https://shatkar-gaig@github.com/shatkar-gaig/tap-delivery.git
+      ref:
+        branch: main
+    subPath: config/tap-workload/friday-java-web-app
 
